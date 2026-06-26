@@ -2,7 +2,7 @@
   <div class="max-w-container-max mx-auto px-gutter h-full flex justify-between items-center">
 
     <!-- Logo -->
-    <a class="flex items-center" href="#">
+    <a class="flex items-center" routerLink="/">
       <img alt="Belca Hipotecas Logo" class="h-28 w-auto" src="images/logo-negro.png" />
     </a>
 
@@ -17,7 +17,7 @@
         </button>
         <div
           class="absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 border border-outline-variant p-sm">
-          <a class="flex items-center p-3 hover:bg-surface-container rounded-lg transition-colors" href="#">
+          <a class="flex items-center p-3 hover:bg-surface-container rounded-lg transition-colors" routerLink="/nueva-hipoteca">
             <span class="material-symbols-outlined mr-3 text-primary">add_home</span>
             <div>
               <p class="font-bold text-primary text-sm">Nueva Hipoteca</p>
@@ -72,7 +72,7 @@
   @if (mobileMenuOpen()) {
   <div class="md:hidden bg-white border-t border-outline-variant shadow-lg">
     <div class="flex flex-col p-md gap-4">
-      <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#"
+      <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" routerLink="/nueva-hipoteca"
         (click)="toggleMobileMenu()">Nueva Hipoteca</a>
       <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#"
         (click)="toggleMobileMenu()">Mejorar Hipoteca</a>
