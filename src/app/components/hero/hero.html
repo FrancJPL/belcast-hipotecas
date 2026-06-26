@@ -1,13 +1,17 @@
-<section class="relative pt-32 pb-xl overflow-hidden min-h-[90vh] flex items-center bg-surface">
+<section class="relative pt-32 pb-xl overflow-hidden min-h-[90vh] flex items-center">
 
-  <!-- Blob decorativo derecha -->
-  <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/[0.06] to-transparent pointer-events-none"></div>
-  <!-- Círculo decorativo grande -->
-  <div class="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-tertiary-fixed/20 blur-3xl pointer-events-none"></div>
+  <!-- Fondo: foto oficina -->
+  <div class="absolute inset-0 z-0">
+    <div
+      class="w-full h-full bg-cover bg-center"
+      style="background-image: url('images/oficina-exterior.jpg')"
+    ></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/40 md:via-white/80"></div>
+  </div>
 
-  <div class="max-w-container-max mx-auto px-gutter relative z-10 grid lg:grid-cols-2 gap-md items-end">
+  <div class="max-w-container-max mx-auto px-gutter relative z-10 grid lg:grid-cols-2 gap-md items-center">
 
-    <div appReveal class="pb-8 lg:pb-0">
+    <div appReveal>
       <span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant px-4 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">
         Líderes en Intermediación
       </span>
@@ -43,13 +47,49 @@
       </div>
     </div>
 
-    <!-- Foto equipo: sin fondo que choque, encaja sobre bg-surface -->
-    <div class="hidden lg:flex items-end justify-center" appReveal style="transition-delay: 300ms;">
-      <img
-        src="images/equipo-hero.jpg"
-        alt="Equipo Belca Hipotecas"
-        class="max-h-[80vh] object-contain"
-      />
+    <!-- Tarjetas de stats flotantes -->
+    <div class="hidden lg:flex flex-col gap-4 items-end pr-8" appReveal style="transition-delay: 300ms;">
+
+      <div class="glass-card rounded-2xl px-6 py-4 flex items-center gap-4 w-64 shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-on-primary text-2xl">account_balance</span>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-primary">+20</p>
+          <p class="text-xs text-secondary">bancos analizados</p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl px-6 py-4 flex items-center gap-4 w-64 shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-primary text-2xl">savings</span>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-primary">€150/mes</p>
+          <p class="text-xs text-secondary">ahorro medio conseguido</p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl px-6 py-4 flex items-center gap-4 w-64 shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-on-primary text-2xl">star</span>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-primary">4.9 / 5</p>
+          <p class="text-xs text-secondary">valoración en Google</p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl px-6 py-4 flex items-center gap-4 w-64 shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-primary">100%</p>
+          <p class="text-xs text-secondary">gestión gratuita</p>
+        </div>
+      </div>
+
     </div>
 
   </div>
