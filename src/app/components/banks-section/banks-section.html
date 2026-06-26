@@ -1,0 +1,20 @@
+<section class="py-xl bg-white border-b border-outline-variant">
+  <div class="max-w-container-max mx-auto px-gutter text-center">
+    <h2 class="font-headline-md text-headline-md text-primary mb-4" appReveal>
+      Tú quédate en casa, nosotros negociamos por ti
+    </h2>
+    <p class="text-secondary max-w-3xl mx-auto mb-12" appReveal>
+      Trabajamos con las principales entidades financieras del mercado para conseguir condiciones que difícilmente obtendrías acudiendo por tu cuenta.
+    </p>
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70 hover:opacity-100 transition-opacity duration-500"
+      appReveal
+    >
+      @for (bank of banks; track bank) {
+        <div class="h-12 flex items-center justify-center font-black text-xl text-slate-400">
+          {{ bank }}
+        </div>
+      }
+    </div>
+  </div>
+</section>

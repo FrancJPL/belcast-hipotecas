@@ -1,0 +1,116 @@
+<section class="py-xl bg-surface" id="contacto">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="grid lg:grid-cols-2 gap-xl items-start">
+
+      <!-- Info -->
+      <div appReveal>
+        <h2 class="font-headline-md text-headline-md text-primary mb-lg">¿Empezamos a buscar tu hipoteca?</h2>
+        <p class="text-secondary mb-lg">
+          Déjanos tus datos y un consultor experto se pondrá en contacto contigo en menos de 24 horas para realizar tu estudio gratuito.
+        </p>
+        <div class="space-y-md">
+          <div class="flex gap-4">
+            <span class="material-symbols-outlined text-primary">location_on</span>
+            <div>
+              <p class="font-bold">Oficina El Prat de Llobregat</p>
+              <p class="text-sm text-secondary">Carrer de Jaume Casanovas, 10, 08820</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="material-symbols-outlined text-primary">call</span>
+            <div>
+              <p class="font-bold">Llámanos</p>
+              <p class="text-sm text-secondary">+34 930 000 000</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="material-symbols-outlined text-primary">mail</span>
+            <div>
+              <p class="font-bold">Escríbenos</p>
+              <p class="text-sm text-secondary">hola&#64;belcahipotecas.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="bg-white p-lg rounded-3xl border border-outline-variant shadow-xl" appReveal style="transition-delay: 200ms;">
+        <form class="space-y-4" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs font-bold uppercase text-secondary mb-1 block">Nombre</label>
+              <input
+                class="w-full rounded-lg border border-outline-variant focus:ring-primary p-3"
+                placeholder="Tu nombre"
+                type="text"
+                [(ngModel)]="form.nombre"
+                name="nombre"
+              />
+            </div>
+            <div>
+              <label class="text-xs font-bold uppercase text-secondary mb-1 block">Teléfono</label>
+              <input
+                class="w-full rounded-lg border border-outline-variant focus:ring-primary p-3"
+                placeholder="600 000 000"
+                type="tel"
+                [(ngModel)]="form.telefono"
+                name="telefono"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="text-xs font-bold uppercase text-secondary mb-1 block">Email</label>
+            <input
+              class="w-full rounded-lg border border-outline-variant focus:ring-primary p-3"
+              placeholder="ejemplo&#64;email.com"
+              type="email"
+              [(ngModel)]="form.email"
+              name="email"
+            />
+          </div>
+          <div>
+            <label class="text-xs font-bold uppercase text-secondary mb-1 block">Tipo de consulta</label>
+            <select
+              class="w-full rounded-lg border border-outline-variant focus:ring-primary p-3"
+              [(ngModel)]="form.tipo"
+              name="tipo"
+            >
+              <option>Nueva Hipoteca</option>
+              <option>Mejorar mi Hipoteca</option>
+              <option>Hipoteca 100%</option>
+              <option>Otros</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs font-bold uppercase text-secondary mb-1 block">Mensaje (Opcional)</label>
+            <textarea
+              class="w-full rounded-lg border border-outline-variant focus:ring-primary p-3"
+              placeholder="¿En qué podemos ayudarte?"
+              rows="4"
+              [(ngModel)]="form.mensaje"
+              name="mensaje"
+            ></textarea>
+          </div>
+          <div class="flex items-center gap-2">
+            <input
+              class="rounded text-primary focus:ring-primary"
+              type="checkbox"
+              [(ngModel)]="form.privacidad"
+              name="privacidad"
+            />
+            <label class="text-xs text-secondary">
+              Acepto la <a class="underline" href="#">política de privacidad</a>
+            </label>
+          </div>
+          <button
+            class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:bg-primary-container transition-all"
+            type="submit"
+          >
+            Enviar solicitud
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

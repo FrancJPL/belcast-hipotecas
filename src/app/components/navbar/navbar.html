@@ -1,0 +1,96 @@
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm h-20 transition-all duration-300">
+  <div class="max-w-container-max mx-auto px-gutter h-full flex justify-between items-center">
+
+    <!-- Logo -->
+    <a class="flex items-center" href="#">
+      <img
+        alt="Belca Hipotecas Logo"
+        class="h-12 w-auto"
+        src="https://lh3.googleusercontent.com/aida/AP1WRLuau_pxwDtKj9TVd514i95yjjzYaN3jisWAOqv7x3nnaP-atkIfLPvcvcGuQXJy5wF35F6NJ4jJc2tSbG1uo-aGSvEM3XDxmll-G8qARjw-gs2UIvsCEa3UFLtgF2sj6jJczwVA9pIEhgOn79-0RfqUTdrReeZxhffsdAhP1pTBIsccTOYexyW6vFVz9Wb6HVCx5jV9CFCGRcyjrgMLAwt0HZHhpcbYZN88w5Mc_XJvzfkCATqFw8Vo6K4"
+      />
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-md">
+
+      <!-- Dropdown Hipotecas -->
+      <div class="relative group">
+        <button class="flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-primary transition-colors py-2">
+          Hipotecas <span class="material-symbols-outlined text-[18px]">expand_more</span>
+        </button>
+        <div class="absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 border border-outline-variant p-sm">
+          <a class="flex items-center p-3 hover:bg-surface-container rounded-lg transition-colors" href="#">
+            <span class="material-symbols-outlined mr-3 text-primary">add_home</span>
+            <div>
+              <p class="font-bold text-primary text-sm">Nueva Hipoteca</p>
+              <p class="text-xs text-secondary">Compra tu primera vivienda</p>
+            </div>
+          </a>
+          <a class="flex items-center p-3 hover:bg-surface-container rounded-lg transition-colors" href="#">
+            <span class="material-symbols-outlined mr-3 text-primary">trending_down</span>
+            <div>
+              <p class="font-bold text-primary text-sm">Mejorar Hipoteca</p>
+              <p class="text-xs text-secondary">Reduce tu cuota mensual</p>
+            </div>
+          </a>
+          <a class="flex items-center p-3 hover:bg-surface-container rounded-lg transition-colors" href="#">
+            <span class="material-symbols-outlined mr-3 text-primary">percent</span>
+            <div>
+              <p class="font-bold text-primary text-sm">Hipoteca 100%</p>
+              <p class="text-xs text-secondary">Financiación máxima</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#calculadora">Simulador</a>
+      <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">Blog</a>
+      <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#contacto">Contacto</a>
+
+      <!-- WhatsApp -->
+      <a
+        href="https://wa.me/34614026255"
+        target="_blank"
+        aria-label="WhatsApp"
+        class="flex items-center justify-center w-10 h-10 rounded-full bg-[#25D366] text-white hover:scale-110 transition-transform shadow-sm"
+      >
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.143c1.589.943 3.385 1.44 5.217 1.441h.001c5.454 0 9.893-4.439 9.895-9.894.002-2.643-1.029-5.127-2.906-7.005-1.876-1.878-4.361-2.91-7.002-2.911-5.454 0-9.892 4.439-9.895 9.895-.001 2.045.632 4.033 1.828 5.68l-.999 3.651 3.738-.981zm11.387-5.464c-.3-.149-1.774-.874-2.048-.974-.274-.1-.474-.149-.674.149-.2.3-.774.974-.949 1.174-.175.199-.349.224-.649.075-.3-.149-1.265-.467-2.41-1.487-.89-.793-1.49-1.773-1.665-2.072-.175-.3-.019-.461.13-.61.135-.133.3-.349.449-.524.149-.175.199-.3.3-.499.1-.2.05-.374-.025-.524-.075-.15-.674-1.623-.924-2.224-.244-.588-.492-.508-.674-.517-.175-.008-.375-.01-.575-.01-.2 0-.524.075-.799.374-.275.3-1.049 1.024-1.049 2.497 0 1.472 1.074 2.893 1.224 3.093.15.2 2.112 3.226 5.117 4.526.714.309 1.272.494 1.707.632.717.227 1.37.195 1.886.118.574-.085 1.774-.724 2.023-1.423.249-.699.249-1.298.175-1.423-.075-.125-.275-.199-.575-.349z"/>
+        </svg>
+      </a>
+
+      <a
+        class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-md text-label-md hover:bg-primary/90 transition-all shadow-md active:scale-95"
+        href="#calculadora"
+      >
+        Simula tu hipoteca
+      </a>
+    </div>
+
+    <!-- Mobile toggle -->
+    <button class="md:hidden text-primary" (click)="toggleMobileMenu()" aria-label="Abrir menú">
+      <span class="material-symbols-outlined text-3xl">{{ mobileMenuOpen() ? 'close' : 'menu' }}</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  @if (mobileMenuOpen()) {
+    <div class="md:hidden bg-white border-t border-outline-variant shadow-lg">
+      <div class="flex flex-col p-md gap-4">
+        <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#" (click)="toggleMobileMenu()">Nueva Hipoteca</a>
+        <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#" (click)="toggleMobileMenu()">Mejorar Hipoteca</a>
+        <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#" (click)="toggleMobileMenu()">Hipoteca 100%</a>
+        <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#calculadora" (click)="toggleMobileMenu()">Simulador</a>
+        <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#" (click)="toggleMobileMenu()">Blog</a>
+        <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#contacto" (click)="toggleMobileMenu()">Contacto</a>
+        <a
+          class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-md text-label-md text-center hover:bg-primary/90 transition-all shadow-md"
+          href="#calculadora"
+          (click)="toggleMobileMenu()"
+        >
+          Simula tu hipoteca
+        </a>
+      </div>
+    </div>
+  }
+</nav>

@@ -1,0 +1,22 @@
+<section class="py-xl bg-white">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <h2 class="font-headline-md text-headline-md text-primary mb-xl text-center" appReveal>
+      Somos especialistas en hipotecas
+    </h2>
+    <div class="grid md:grid-cols-3 gap-lg">
+      @for (service of services; track service.title) {
+        <div
+          class="reveal hover-lift p-md rounded-2xl bg-surface border border-outline-variant/30 text-center"
+          appReveal
+          [style.transition-delay]="service.delay"
+        >
+          <div class="text-primary mb-4 flex justify-center">
+            <span class="material-symbols-outlined text-5xl">{{ service.icon }}</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-3">{{ service.title }}</h3>
+          <p class="text-secondary text-sm">{{ service.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

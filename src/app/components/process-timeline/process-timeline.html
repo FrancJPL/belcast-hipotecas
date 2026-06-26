@@ -1,0 +1,50 @@
+<section class="py-xl bg-primary text-white overflow-hidden">
+  <div class="max-w-container-max mx-auto px-gutter">
+
+    <div class="text-center mb-xl" appReveal>
+      <h2 class="font-headline-md text-headline-md mb-4">Tu hipoteca en unos simples pasos</h2>
+      <p class="text-on-primary-container max-w-2xl mx-auto">Un proceso claro y transparente para conseguir las mejores condiciones.</p>
+    </div>
+
+    <div class="relative space-y-12">
+      <!-- Línea central -->
+      <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-white/20 -translate-x-1/2"></div>
+
+      @for (step of steps; track step.number) {
+        <div
+          class="relative flex flex-col md:flex-row items-center gap-lg"
+          appReveal
+          [style.transition-delay]="step.delay"
+        >
+          @if (step.side === 'left') {
+            <!-- Texto izquierda (desktop) -->
+            <div class="flex-1 md:text-right hidden md:block">
+              <h4 class="font-bold text-xl mb-2">{{ step.number }}. {{ step.title }}</h4>
+              <p class="text-on-primary-container text-sm">{{ step.description }}</p>
+            </div>
+            <!-- Número -->
+            <div class="w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center font-bold text-lg relative z-10 border-4 border-primary ring-4 ring-white/10 shrink-0">
+              {{ step.number }}
+            </div>
+            <!-- Texto móvil -->
+            <div class="flex-1 md:hidden">
+              <h4 class="font-bold text-xl mb-2">{{ step.number }}. {{ step.title }}</h4>
+              <p class="text-on-primary-container text-sm">{{ step.description }}</p>
+            </div>
+            <div class="flex-1 hidden md:block"></div>
+          } @else {
+            <div class="flex-1 hidden md:block"></div>
+            <div class="w-12 h-12 rounded-full bg-white/20 text-white flex items-center justify-center font-bold text-lg relative z-10 border-4 border-primary ring-4 ring-white/10 shrink-0">
+              {{ step.number }}
+            </div>
+            <div class="flex-1">
+              <h4 class="font-bold text-xl mb-2">{{ step.number }}. {{ step.title }}</h4>
+              <p class="text-on-primary-container text-sm text-left">{{ step.description }}</p>
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
