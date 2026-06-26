@@ -1,8 +1,25 @@
 <section class="py-xl bg-white">
   <div class="max-w-container-max mx-auto px-gutter">
-    <h2 class="font-headline-md text-headline-md text-primary mb-xl text-center" appReveal>
-      Somos especialistas en hipotecas
-    </h2>
+
+    <div class="grid lg:grid-cols-2 gap-xl items-center mb-xl">
+      <div appReveal>
+        <h2 class="font-headline-md text-headline-md text-primary mb-4">
+          Somos especialistas en hipotecas
+        </h2>
+        <p class="text-secondary text-body-lg">
+          Más de 500 familias han confiado en nosotros para conseguir las mejores condiciones bancarias.
+          Nuestro equipo negocia directamente con los bancos para que tú salgas ganando.
+        </p>
+      </div>
+      <div appReveal style="transition-delay: 150ms;">
+        <img
+          src="images/equipo-mesa.jpg"
+          alt="Equipo de asesores de Belca Hipotecas"
+          class="w-full rounded-3xl object-cover shadow-xl"
+        />
+      </div>
+    </div>
+
     <div class="grid md:grid-cols-3 gap-lg">
       @for (service of services; track service.title) {
         <div
