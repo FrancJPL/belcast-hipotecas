@@ -6,15 +6,12 @@
     <p class="text-secondary max-w-3xl mx-auto mb-12" appReveal>
       Trabajamos con las principales entidades financieras del mercado para conseguir condiciones que difícilmente obtendrías acudiendo por tu cuenta.
     </p>
-    <div
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70 hover:opacity-100 transition-opacity duration-500"
-      appReveal
-    >
-      @for (bank of banks; track bank) {
-        <div class="h-12 flex items-center justify-center font-black text-xl text-slate-400">
-          {{ bank }}
-        </div>
-      }
+    <div appReveal class="opacity-80 hover:opacity-100 transition-opacity duration-500">
+      <img
+        src="images/logos-bancos.webp"
+        alt="Bancos con los que trabajamos: Sabadell, Bankinter, Santander, BBVA, Unicaja, CaixaBank, Abanca, Openbank, MyInvestor, ING, Kutxabank, Ibercaja y más"
+        class="w-full max-w-3xl mx-auto"
+      />
     </div>
   </div>
 </section>
