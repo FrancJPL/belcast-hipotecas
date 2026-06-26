@@ -1,15 +1,13 @@
-<section class="relative pt-32 pb-xl overflow-hidden min-h-[90vh] flex items-center">
-  <!-- Fondo -->
-  <div class="absolute inset-0 z-0">
-    <div
-      class="w-full h-full bg-cover bg-center"
-      style="background-image: url('images/oficina-exterior.jpg')"
-    ></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/40 md:via-white/80"></div>
-  </div>
+<section class="relative pt-32 pb-xl overflow-hidden min-h-[90vh] flex items-center bg-surface">
 
-  <div class="max-w-container-max mx-auto px-gutter relative z-10 grid lg:grid-cols-2 gap-md items-center">
-    <div appReveal>
+  <!-- Blob decorativo derecha -->
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/[0.06] to-transparent pointer-events-none"></div>
+  <!-- Círculo decorativo grande -->
+  <div class="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-tertiary-fixed/20 blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-container-max mx-auto px-gutter relative z-10 grid lg:grid-cols-2 gap-md items-end">
+
+    <div appReveal class="pb-8 lg:pb-0">
       <span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant px-4 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">
         Líderes en Intermediación
       </span>
@@ -45,13 +43,14 @@
       </div>
     </div>
 
-    <!-- Foto equipo -->
+    <!-- Foto equipo: sin fondo que choque, encaja sobre bg-surface -->
     <div class="hidden lg:flex items-end justify-center" appReveal style="transition-delay: 300ms;">
       <img
         src="images/equipo-hero.jpg"
         alt="Equipo Belca Hipotecas"
-        class="max-h-[75vh] object-contain drop-shadow-2xl"
+        class="max-h-[80vh] object-contain"
       />
     </div>
+
   </div>
 </section>
